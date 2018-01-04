@@ -30,9 +30,9 @@ async def on_message(message):
         if client.user != message.author:
             status = get_server_status()
             if status == True:
-                msg = "Server is ONLINE."
+                msg = "サーバーはオンラインです"
             else:
-                msg = "Server is OFFLINE."
+                msg = "サーバーはオフラインです"
             await client.send_message(message.channel,msg)
 
 client.run(TOKEN)
