@@ -1,10 +1,11 @@
 import discord
 import minestat
+import os
 
 client = discord.Client()
-TOKEN = "Mzk4NDAwMjA3Njk3NDc3NjMy.DS-NDQ.MDw5PHrLgyQe9HA47PVANGJ0zFg"
-ADDRESS = "180.16.218.228"
-PORT = "9933"
+TOKEN = os.environ.get('TOKEN')
+ADDRESS = os.environ.get('ADDRESS')
+PORT = os.environ.get('PORT')
 
 def get_server_status():
     # Below is an example using the MineStat class.
