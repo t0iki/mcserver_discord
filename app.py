@@ -34,5 +34,8 @@ async def on_message(message):
             else:
                 msg = "サーバーはオフラインです"
             await client.send_message(message.channel,msg)
+    elif message.content.startswith("うんこ"):
+        if client.user != message.author:
+            await client.send_message(message.channel, ':poop:')
 
 client.run(TOKEN)
