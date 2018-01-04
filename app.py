@@ -10,7 +10,8 @@ PORT = os.environ.get('PORT')
 def get_server_status():
     # Below is an example using the MineStat class.
     # If server is offline, other instance members will be None.
-    print(ADDRESS,int(PORT))
+    print(ADDRESS)
+    print(int(PORT))
     ms = minestat.MineStat(ADDRESS, int(PORT))
     print('Minecraft server status of %s on port %d:' % (ms.address, ms.port))
     if ms.online:
