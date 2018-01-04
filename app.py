@@ -37,5 +37,8 @@ async def on_message(message):
     elif message.content.startswith("うんこ"):
         if client.user != message.author:
             await client.send_message(message.channel, ':poop:')
+    elif message.content.startswith("!help"):
+        if client.user != message.author:
+            await client.send_message(message.channel, 'Commands: !server , うんこ')
 
 client.run(TOKEN)
