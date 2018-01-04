@@ -1,6 +1,5 @@
 import discord
 import minestat
-from mcstatus import MinecraftServer
 import urllib.request
 import json
 
