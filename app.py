@@ -52,7 +52,7 @@ async def on_message(message):
             await client.send_message(message.channel, ':poop:')
     elif message.content.startswith("!help"):
         if client.user != message.author:
-            await client.send_message(message.channel, 'Commands: !server , うんこ')
+            await client.send_message(message.channel, 'Commands: !server , うんこ , !lollvl <summoner-name>')
     elif message.content.startswith("!lollvl"):
         words = message.content.split(' ')
         if len(words) >= 3:
