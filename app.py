@@ -64,6 +64,3 @@ async def on_message(message):
         await client.send_message(message.channel, msg)
 
 client.run(TOKEN)
-
-if __name__ == '__main__':
-    get_summonerlevel('ヴォイテク')
