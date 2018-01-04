@@ -5,7 +5,7 @@ import os
 client = discord.Client()
 TOKEN = os.environ.get('TOKEN')
 ADDRESS = os.environ.get('ADDRESS')
-PORT = os.environ.get('PORT')
+PORT = '9933'
 
 def get_server_status():
     # Below is an example using the MineStat class.
