@@ -1,13 +1,11 @@
 import discord
 import minestat
-import urllib.request
-import json
 
 client = discord.Client()
 TOKEN = "Mzk4NDAwMjA3Njk3NDc3NjMy.DS-NDQ.MDw5PHrLgyQe9HA47PVANGJ0zFg"
-ADDRESS = "192.168.10.43"
+ADDRESS = "180.16.218.228"
 PORT = "9933"
-URL = "http://minecraft-api.com/v1/get/?server={}:{}".format(ADDRESS,PORT)
+
 def get_server_status():
     # Below is an example using the MineStat class.
     # If server is offline, other instance members will be None.
