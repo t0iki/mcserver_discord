@@ -3,6 +3,7 @@ import minestat
 import os
 import urllib.request
 import json
+from pytz import timezone
 import datetime
 from riotwatcher import RiotWatcher
 
@@ -30,7 +31,7 @@ def get_summonerlevel(name):
     return summoner['summonerLevel']
 
 def get_data():
-    now = datetime.datetime.now()
+    now = datetime.datetime.now(timezone("JST"))
     nowstr = str(now)[:-7]
     date = nowstr.split(" ")
     [year,month,day] = date[0].split("-")
