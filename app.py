@@ -10,12 +10,12 @@ from riotwatcher import RiotWatcher
 nums = {'0':':zero:','1':':one:','2':':two:','3':':three:','4':':four:','5':':five:','6':':six:','7':':seven:','8':':eight:','9':':nine:'}
 
 client = discord.Client()
-TOKEN = os.environ.get('TOKEN')
-ADDRESS = os.environ.get('ADDRESS')
-# TOKEN = 'Mzk4NDM2NzE3OTQzODQ4OTYw.DS-hSg.PMR2Gdj88dMeEuCGRs_xcHTKPIk'
-# ADDRESS = '180.16.218.228'
-RIOTAPI = os.environ.get('RIOTAPI')
-# RIOTAPI = 'RGAPI-d9519528-a4ce-429c-9311-030d4e91ed84'
+# TOKEN = os.environ.get('TOKEN')
+# ADDRESS = os.environ.get('ADDRESS')
+TOKEN = 'Mzk4NDM2NzE3OTQzODQ4OTYw.DS-hSg.PMR2Gdj88dMeEuCGRs_xcHTKPIk'
+ADDRESS = '180.16.218.228'
+# RIOTAPI = os.environ.get('RIOTAPI')
+RIOTAPI = 'RGAPI-d9519528-a4ce-429c-9311-030d4e91ed84'
 PORT = '9933'
 connection = RiotWatcher(RIOTAPI)
 
@@ -32,7 +32,8 @@ def get_summonerlevel(name):
 
 def get_data():
     now = datetime.datetime.now(timezone('Asia/Tokyo'))
-    nowstr = str(now)[:-7]
+    print(now)
+    nowstr = str(now)[:-13]
     date = nowstr.split(" ")
     [year,month,day] = date[0].split("-")
     [hour,minute,sec] = date[1].split(":")
