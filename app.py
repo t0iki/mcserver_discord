@@ -31,7 +31,7 @@ def get_summonerlevel(name):
     return summoner['summonerLevel']
 
 def get_data():
-    now = datetime.datetime.now(timezone("JST"))
+    now = datetime.datetime.now(timezone('Asia/Tokyo'))
     nowstr = str(now)[:-7]
     date = nowstr.split(" ")
     [year,month,day] = date[0].split("-")
